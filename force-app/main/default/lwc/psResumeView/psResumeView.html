@@ -1,0 +1,230 @@
+<template>
+    <div class="resume-view-container">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+                <!-- <button data-id="submitBtn" class="btnActiveColor btn slds-float_right">
+                    <span>Download</span>
+                </button> -->
+            </div>
+            <div class="slds-col slds-size_1-of-1 nameDiv text-48 p-t-20">
+                {resumedetails.displayName}
+            </div>
+            <div class="slds-col slds-size_1-of-1 text-24 p-b-20">
+                {resumedetails.title}
+            </div>
+            <div class="slds-col slds-size_1-of-1 text-14 btm-border p-b-20">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <span>Email :</span> {resumedetails.email}
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <span>Phone :</span> {resumedetails.phonenumber}
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <span>Location :</span> {resumedetails.location}
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 m-t-20">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 m-b-10">
+                        <span class="text-24 slds-float_left">Summary</span>
+                    </div>
+                    <div class="slds-col slds-size_11-of-12 t-align-l">
+                        <lightning-formatted-rich-text value={resumedetails.summary}></lightning-formatted-rich-text>
+                        <!-- <span>{resumedetails.summary}</span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 m-t-20">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 m-b-10">
+                        <span class="text-24 slds-float_left">Skills/Technologies</span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 t-align-l">
+                        <div class="slds-grid slds-wrap text-12">
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Salesforce Platform</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Salesforce.com platform, Apex (SFDC), Visual Force, FFLIB Framework, Bootstrap, Lightning, SLDS, Lightning communities, Sales Cloud, Service Cloud, Salesforce billing, Salesforce CPQ, Google Apps, DBAmp, BigMachines, Informatica, Helpscout
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >DevOps Tools</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                CI using Jenkins, ANT, Copado, Gearset
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Marketing Automation</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Marketo, Silverpop, Eloqua, Marketing Cloud, Outreach.io, Hubspot, SaaSoptics
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Web Technologies</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                HTML, JavaScript, AJAX, CSS, XML, WSDL, DHTML
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Version Control Systems</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                SVN, Git
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Programming Languages</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Java, C, .Net, Apex(SFDC)
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Operating Systems</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Windows 10, 8, 7, Vista, XP, 2000, Windows Server (2003, 2008)
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Development Tools</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Visual Studio Code, NetBeans, MS Office Suite, Eclipse, Dreamweaver
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Databases</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                MySQL, Microsoft Access, PL/SQL, Oracle 9i, SOQL, SOSL
+                            </div>
+                            <div class="slds-col slds-size_2-of-8 p-b-10">
+                                <p >Management Knowledge</p>
+                            </div>
+                            <div class="slds-col slds-size_6-of-8 p-b-10">
+                                Human Computer Interaction, Business Ethics, Project Management
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <template if:true={resumedetails.certifications}>
+                <div class="slds-col slds-size_1-of-1 m-t-20">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 m-b-10">
+                            <span class="text-24 slds-float_left">Certifications</span>
+                        </div>                        
+                        <template for:each={resumedetails.certifications} for:item="cert">
+                            <div class="slds-col slds-size_1-of-1 t-align-l p-b-10" key={cert.certId}>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-8 t-align-l">
+                                        <img src={cert.certImageURL} height="80" width="80">
+                                    </div>
+                                    <div class="slds-col slds-size_5-of-8 t-align-l">                                        
+                                        <p class="text-14-b">{cert.certName}</p>
+                                        <p >Organization:  {cert.orgName}</p>
+                                        <p >Credential ID: {cert.cerdentialId}</p>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-8 t-align-r">
+                                        <p ><lightning-formatted-date-time value={cert.startDate} year="numeric" month="short"></lightning-formatted-date-time></p>
+                                    </div>
+                                </div>
+                                
+                            </div>                            
+                        </template>                        
+                    </div>
+                </div>
+            </template>
+            <template if:true={resumedetails.experiences}>
+                <div class="slds-col slds-size_1-of-1 m-t-20">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 m-b-10">
+                            <span class="text-24 slds-float_left">Work Experience</span>
+                        </div>                        
+                        <template for:each={resumedetails.experiences} for:item="work">
+                            <div class="slds-col slds-size_1-of-1 t-align-l" key={work.Id}>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_6-of-8 t-align-l">
+                                        <div class="p-l-10 m-b-15">
+                                            <p class="text-14-b">{work.Organization__r.Name}, {work.Location__c}</p>
+                                            <p class="text-14-b m-b-10 text-underline">{work.Name}</p>
+                                            <p ><lightning-formatted-rich-text value={work.Description__c}></lightning-formatted-rich-text></p>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-8 t-align-r">
+                                        <p ><lightning-formatted-date-time value={work.Start_Date__c} year="numeric" month="short" ></lightning-formatted-date-time> - <lightning-formatted-date-time value={work.End_Date__c} year="numeric" month="short" ></lightning-formatted-date-time></p>
+                                    </div>
+                                </div>
+                                
+                            </div>                            
+                        </template>                        
+                    </div>
+                </div>
+            </template>
+            <template if:true={resumedetails.educations}>
+                <div class="slds-col slds-size_1-of-1 m-t-20">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 m-b-10">
+                            <span class="text-24 slds-float_left">Education</span>
+                        </div>                        
+                        <template for:each={resumedetails.educations} for:item="edu">
+                            <div class="slds-col slds-size_1-of-1 t-align-l" key={edu.Id}>
+                                <div class="slds-grid slds-wrap m-b-10">
+                                    <div class="slds-col slds-size_6-of-8 t-align-l">
+                                        <div class="p-l-10">
+                                            <p class="text-14-b m-b-5">{edu.Name}</p>
+                                            <p class="m-b-5">{edu.Field_Of_Study__c}</p>
+                                            <p class="m-b-5">{edu.Organization__r.Name}</p>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-8 t-align-r">
+                                        <p ><lightning-formatted-date-time value={edu.End_Date__c} year="numeric" month="short"></lightning-formatted-date-time></p>
+                                    </div>
+                                </div>                                
+                            </div>                            
+                        </template>                        
+                    </div>
+                </div>
+            </template>
+            <template if:true={resumedetails.references}>
+                <div class="slds-col slds-size_1-of-1 m-t-20">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 m-b-10">
+                            <span class="text-24 slds-float_left">References</span>
+                        </div>                        
+                        <template for:each={resumedetails.references} for:item="ref">
+                            <div class="slds-col slds-size_1-of-1 t-align-l" key={ref.Id}>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_6-of-8 t-align-l">
+                                        <p >{ref.Name}</p>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-8 t-align-l">
+                                    </div>
+                                </div>                                
+                            </div>                            
+                        </template>                        
+                    </div>
+                </div>
+            </template>
+            <!-- <div class="slds-col slds-size_1-of-1">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <span class="text-18 slds-float_left">Education</span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3"> -->
+                        <!-- Content for the second column -->
+                    <!-- </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3"> -->
+                        <!-- Content for the first column -->
+                    <!-- </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3"> -->
+                        <!-- Content for the second column -->
+                    <!-- </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</template>

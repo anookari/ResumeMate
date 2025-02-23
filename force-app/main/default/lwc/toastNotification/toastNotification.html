@@ -1,0 +1,16 @@
+<template>
+    <template if:true={showToastMessage}>
+        <div class={toastClass} role="alert" aria-live="assertive">
+            <!-- Icon always white -->
+            <lightning-icon icon-name={iconName} size="small" class="toast-icon white-icon"></lightning-icon>
+            <div class="toast-content">
+                <strong>{toastTitle}</strong>
+                <p>{toastMessage}</p>
+            </div>
+            <!-- Conditionally render close button -->
+            <template if:true={showCloseButton}>
+                <lightning-icon icon-name="utility:close" size="small" class="close-btn" onclick={closeToast} alternative-text="Close" color="white"></lightning-icon>
+            </template>
+        </div>
+    </template>
+</template>

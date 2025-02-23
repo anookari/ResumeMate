@@ -1,0 +1,38 @@
+<template>
+    <div class="anookari-container">
+        <div data-id="mobileDiv" class="slds-hide_medium slds-grid slds-wrap" >
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 fixed-top headerDiv slds-align_absolute-center">
+                <div class="slds-grid slds-wrap wid-100">
+                    <div class="slds-col slds-size_1-of-4">
+                    </div>
+                    <div class="slds-col slds-size_2-of-4">
+                        <span class="text-36 appTitle">అనూకరి</span>                        
+                    </div>
+                    <div class="slds-col slds-size_1-of-4">
+                        <div class="slds-float_right profile-icon-div">
+                            <div class="circle">
+                                <lightning-icon class="profile-icon" size="small" icon-name="utility:user" alternative-text="Profile" title="Profile"></lightning-icon>
+                            </div>                            
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 content-div" >
+                <c-anookari-home style="width:100%"></c-anookari-home>
+            </div>
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 fixed-bottom headerDiv">
+                <div class="slds-grid slds-wrap wid-100">
+                    <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-icon icon-name="utility:home" alternative-text="Home" title="Home"></lightning-icon>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-icon icon-name="utility:search" alternative-text="Search" title="Search"></lightning-icon>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-icon icon-name="utility:inbox" alternative-text="Dashboard" title="Dashboard"></lightning-icon>                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

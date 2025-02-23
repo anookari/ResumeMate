@@ -1,0 +1,9 @@
+<template>
+    <div class="wheel-container">
+        <div class="wheel">
+            <template for:each={numbers} for:item="number">
+                <div key={number} class="number">{number}</div>
+            </template>
+        </div>
+    </div>
+</template>

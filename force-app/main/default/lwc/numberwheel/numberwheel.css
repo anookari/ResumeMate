@@ -1,0 +1,21 @@
+.wheel-container {
+    overflow: hidden;
+    height: 50px; /* Adjust height to the size of a single number */
+    width: 50px;  /* Adjust width to the size of a single number */
+    border: 1px solid #000;
+    position: relative;
+}
+
+.wheel {
+    display: flex;
+    flex-direction: column;
+    transition: transform 2s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.number {
+    height: 50px; /* Match height of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}

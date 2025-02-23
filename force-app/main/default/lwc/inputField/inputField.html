@@ -1,0 +1,92 @@
+<template>
+    <div data-id="floatContainer" class="float-container">
+        <template if:true={isReadOnly}>
+            <label data-id="editLabel" id="readOnlyLabel" class="slds-form-element__label slds-no-flex labelpadding disableText" for="readOnlyField"></label>
+            <input data-id="editInput" readonly id="readOnlyField" type="text" name="inputType" class="slds-no-flex disableText" aria-labelledby="label" placeholder={pPlaceHolderText} value={pFieldValue} ></input>
+        </template>
+        <template if:true={isText}>
+            <label data-id="editLabel" id="textLabel" class="slds-form-element__label slds-no-flex labelpadding" for="textField"></label>
+            <input data-id="editInput" maxlength={maxlen} id="textField" type="text" name="inputType" class="slds-no-flex" aria-labelledby="label" placeholder={pPlaceHolderText} value={pFieldValue}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleInputChange}/>
+        </template>
+        <template if:true={isEmail}>
+            <label data-id="editLabel" id="emailLabel" class="slds-form-element__label slds-no-flex labelpadding" for="emailField"></label>
+            <input data-id="editInput" autocomplete="nope" maxlength={maxlen} id="emailField" type="text" name="inputType" class="slds-no-flex" aria-labelledby="label" placeholder={pPlaceHolderText} value={pFieldValue}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleInputChange}/>
+        </template>
+        <template if:true={isNumber}>
+            <label data-id="editLabel" id="numberLabel" class="slds-form-element__label slds-no-flex labelpadding" for="numberField"></label>
+            <input data-id="editInput" maxlength={maxlen} id="numberField" type="number" name="inputType" pattern="[0-9]*" class="slds-no-flex" aria-labelledby="label" placeholder={pPlaceHolderText} value={pFieldValue}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleInputChange}/>
+        </template>
+        <template if:true={isCurrency}>
+            <label data-id="editLabel" id="currencyLabel" class="slds-form-element__label slds-no-flex labelpadding" for="currencyField"></label>
+            <input data-id="editInput" maxlength={maxlen} id="currencyField" type="number" name="inputType" pattern="[0-9]*" class="slds-no-flex" aria-labelledby="label" placeholder={pPlaceHolderText} value={pFieldValue}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleInputChange}/>
+        </template>
+        <!-- <template if:true={isCombobox}>
+            <div class="ux-ligthning-combo-box">
+                <div class="slds-combobox_container">
+                    <div data-id="combobox-container" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="combobox-element"
+                        class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" >
+                        <div role="none" class="slds-input-has-icon slds-input-has-icon_right" >
+                            <label data-id="label-combobox" class=" slds-form-element__label slds-no-flex ux-float-label " for="input-combobox" >
+                                {fieldlabel}
+                            </label>
+                            <input name="inputType" value={pFieldValue} placeholder={pPlaceHolderText} data-id="input-combobox" onkeyup={checkKey}
+                                id="input-combobox" type="text" role="textbox" autocomplete="off" aria-autocomplete="none" readonly aria-controls="combobox-element"
+                                class="
+                                    slds-input
+                                    slds-combobox__input
+                                    ux-input_empty"                            
+                                onkeydown={listBoxSetActiveItem}
+                                onclick={handleComboboxClick}
+                                onfocus={handleComboboxFocus}
+                                onblur={handleComboboxBlur}/>
+                            <div class=" slds-input__icon-group slds-input__icon-group_right " >
+                                <div class=" slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container " >
+                                    <span data-id="ux-combobox-caret" class="fas fa-sort-down" ></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="combobox-element" data-dropdown-element="true" role="listbox"
+                            class="
+                                slds-listbox slds-listbox_vertical
+                                slds-dropdown
+                                slds-dropdown_fluid
+                                slds-dropdown_length-with-icon-10
+                                slds-dropdown_left "
+                            onmousedown={handleComboBoxOnMouseDown} >
+                            <template for:each={comboboxlist} for:item="comboItem">
+                                <div key={comboItem.value} data-value={comboItem.value} data-text={comboItem.text} role="option" id={optionId} aria-selected="false"
+                                    class="
+                                        slds-media
+                                        slds-listbox__option
+                                        slds-media_center slds-media_small
+                                        slds-listbox__option_plain "                                
+                                    onclick={handleOptionClick}
+                                    onkeydown={handleOptionClick}
+                                    onmousedown={handleMouseDown} >
+                                    <span class="slds-media__body slds-truncate" title={comboItem.text} >{comboItem.text}</span >
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>    -->
+    </div>
+    <div data-id="errorDiv" class="error m-t-10 slds-hide">
+        <div data-id="errorMsg" class="slds-form-element__help m-l-5" role="alert" id="error-message">
+            {errorMessage}
+        </div>
+    </div>
+</template>

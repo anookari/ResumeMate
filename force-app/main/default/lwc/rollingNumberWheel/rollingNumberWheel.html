@@ -1,0 +1,12 @@
+<template>
+    <div class="wheel-container">
+        <div class="wheel" style={wheelStyle}>
+            <template for:each={numbers} for:item="number">
+                <div key={number} class="wheel-item">{number}</div>
+            </template>
+        </div>
+        <div class="current-number">
+            {currentNumber}
+        </div>
+    </div>
+</template>

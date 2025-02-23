@@ -1,0 +1,115 @@
+@import 'c/cssLibrary';
+
+.btnActiveColor{
+    color: #fff;
+    background:var(--t1-c2);
+}
+
+.btnInActiveColor{
+    color: #fff;
+    background:#99ebcd;
+}
+
+.btnWidth{
+    width: 100%;
+}
+
+.submitButton{
+    margin: 0;
+    font-family: var(--book-font-family);
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.submitButton:hover{
+    background:var(--t1-c3);
+}
+
+.firstField{
+    padding-right:20px;
+}
+
+.secondField{
+    padding-left:20px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.toast-icon {
+    margin-right: 12px;
+}
+
+/* Toast box */
+.toast-box {
+    background-color: #4caf50;
+    display: flex; /* Makes icon and text appear side-by-side */
+    align-items: center; /* Vertically center items */
+    min-width: 300px;
+    max-width: 450px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+
+    /*
+    background-color: #4caf50; 
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 250px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;*/
+}
+
+/* Message content */
+.toast-content {
+    flex-grow: 1; /* Allows text to take remaining space */
+    font-size: 16px;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 767px){
+    .firstField{
+        padding-right:0;
+    }
+    
+    .secondField{
+        padding-left:0;
+        margin-top:30px;
+    }
+
+}

@@ -1,0 +1,55 @@
+@import 'c/cssLibrary';
+
+.resume-view-container{
+    width:100%;	
+    font-family: var(--book-font-family) !important;
+}
+
+.nameDiv{
+	margin-top: 10px;
+	border-top: 5px solid #666;
+}
+
+.btnActiveColor{
+    color: #fff;
+    background:var(--t1-c2);
+}
+
+.btn:hover{
+    background:var(--t1-c3);
+}
+
+.btn{
+    margin: 0;
+    font-family: var(--book-font-family);
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btm-border{
+    border-bottom: 1px solid #ccc;
+}
+
+.t-align-l{
+    text-align: left;
+}
+
+.t-align-r{
+    text-align: right;
+}

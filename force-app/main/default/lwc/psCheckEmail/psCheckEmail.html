@@ -1,0 +1,21 @@
+<template>
+    <div class="emailDiv">
+        <div class="slds-col slds-size_1-of-1 p-30">
+            <c-input-field  
+                data-id="contactEmailAddress" 
+                type="email" 
+                name="contactEmailAddress" 
+                fieldvalue={contactEmailAddress} 
+                placeholdertext="Email" 
+                fieldlabel="Email" 
+                onvalidateinput={handleContactEmailAddressChange} 
+                class="contactEmailAddress">
+            </c-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-1 m-t-30">
+            <button class="btnColor submitButton" onclick={checkEmail}>
+                <span>Check Email</span>
+            </button>
+        </div>
+    </div>
+</template>

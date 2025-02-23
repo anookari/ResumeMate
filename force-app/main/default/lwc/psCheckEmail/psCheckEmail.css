@@ -1,0 +1,52 @@
+@import 'c/cssLibrary';
+
+.btnColor {
+    color: var(--t1-white);  
+    background: var(--t1-c2); 
+}
+
+.btnWidth {
+    width: 100%;
+}
+
+.submitButton {
+    margin: 0;
+    font-family: var(--book-font-family);
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    background: var(--t1-c2); 
+    color: var(--t1-white); 
+}
+
+.submitButton:hover {
+    background: var(--t1-c3); 
+}
+
+.emailDiv {
+    margin-top: 150px;
+    padding: 0 80px;
+}
+
+@media (max-width: 767px) {
+    .emailDiv {
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+}

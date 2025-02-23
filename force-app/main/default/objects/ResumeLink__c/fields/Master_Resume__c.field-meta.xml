@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Master_Resume__c</fullName>
+    <label>Master Resume</label>
+    <referenceTo>Master_Resume__c</referenceTo>
+    <relationshipLabel>ResumeLinks</relationshipLabel>
+    <relationshipName>ResumeLinks</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

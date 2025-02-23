@@ -1,0 +1,22 @@
+<template>
+    <div class="banner-container">
+        <!-- Profile Picture -->
+        <div class="profile-pic-container">
+            <img class="profile-pic" src={profilePictureUrl} alt="Profile Picture" />
+        </div>
+
+        <!-- Banner Content -->
+        <div class="banner-content">
+            <!-- Welcome Message -->
+            <h1 class="fade-in welcome-message">{welcomeMessage}</h1>
+
+            <!-- Name Section (Aligned Right) -->
+            <h2 class="fade-in name-container">
+                <span class="name">{name}</span>
+            </h2>
+
+            <!-- Tagline (Aligned Right) -->
+            <p class="fade-in delay tagline">{tagline}</p>
+        </div>
+    </div>
+</template>

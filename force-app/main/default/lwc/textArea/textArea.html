@@ -1,0 +1,29 @@
+<template>
+    <div data-id="floatContainer" class="float-ta-container">
+  
+      <template if:true={readonlyfield}>
+        <label data-id="editLabel" id="multiLineTextLabe1" class="slds-form-element__label slds-no-flex disableText padClass  " for="multiLineText-1" ></label>
+        <textarea data-id="editInput"  maxlength={maxlen} id="multiLineText-1"  name="inputType" class="slds-no-flex disableText widthClass" aria-labelledby="label" placeholder={pPlaceHolderText} 
+                        onblur={handleBlur} 
+                        onfocus={handleFocus} 
+                        onchange={handleFormInputChange} ></textarea>
+      </template>
+  
+  
+      <template if:false={readonlyfield}>
+        <label data-id="editLabel" id="multiLineTextLabel2" class="slds-form-element__label slds-no-flex padClass " for="multiLineText-2" ></label>
+        <textarea data-id="editInput"  rows={maxrows} maxlength={maxlen} id="multiLineText-2"  name="inputType" class="slds-no-flex widthClass" aria-labelledby="label" placeholder={pPlaceHolderText} 
+                        onblur={handleBlur} 
+                        onfocus={handleFocus} 
+                        onchange={handleFormInputChange}  ></textarea>
+      </template>
+  
+    </div>
+    
+    <div data-id="errorDiv" class="error m-t-10 slds-hide">
+      <div data-id="errorMsg" class="slds-form-element__help m-l-5" role="alert" id="error-message">
+        {errorMessage}
+      </div>
+    </div>
+  
+  </template>

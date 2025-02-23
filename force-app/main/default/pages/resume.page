@@ -1,0 +1,94 @@
+<apex:page standardController="Contact" applyBodyTag="false" showHeader="false" sidebar="false" title="Resume" contentType="application/msword#FileName.doc">
+
+    <head>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 1in;
+            }
+
+            #header {
+                text-align: center;
+                margin-bottom: 0.5in;
+            }
+
+            .certification-image {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                margin: 0 0.2in;
+                display: inline-block;
+            }
+
+            .section {
+                margin-bottom: 0.5in;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 0.2in;
+            }
+
+            .detail {
+                margin-left: 0.5in;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="header">
+            <apex:image url="{!URLFOR($Resource.profilePicture)}" styleClass="certification-image" rendered="{!NOT(ISBLANK($Resource.profilePicture))}"/>
+            <apex:image url="{!URLFOR($Resource.LinkedInIcon)}" styleClass="certification-image" rendered="{!NOT(ISBLANK($Resource.LinkedInIcon))}"/>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Contact Information</div>
+            <div class="detail">
+                {!Contact.Name}<br/>
+                {!Contact.Email}<br/>
+                {!Contact.Phone}<br/>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Summary/Objective</div>
+            <div class="detail">
+                <p>A highly motivated and results-oriented professional with...</p>
+            </div>
+        </div>
+
+        <div class="section page-break">
+            <div class="section-title">Experience</div>
+            <div class="detail">
+                <p><b>Job Title</b>, Company Name, Dates</p>
+                <ul>
+                    <li>Responsibility 1</li>
+                    <li>Responsibility 2</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section page-break">
+            <div class="section-title">Education</div>
+            <div class="detail">
+                <p><b>Degree</b>, University Name, Dates</p>
+            </div>
+        </div>
+
+        <div class="section page-break">
+            <div class="section-title">Skills</div>
+            <div class="detail">
+                <ul>
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</apex:page>

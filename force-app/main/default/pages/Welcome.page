@@ -1,0 +1,38 @@
+<apex:page lightningStylesheets="true" showHeader="false" sidebar="false">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Welcome To My Site!</title>
+  </head>
+    <style>
+        body {
+            background : #DEF2F1;
+        }
+        
+        .content {
+          max-width: 1024px;
+          margin: auto;
+          background: white;
+          padding: 10px;
+          -webkit-box-shadow:0 0 2px rgba(0,0,0,0.8);
+          -moz-box-shadow:0 0 2px rgba(0,0,0,0.8);
+          box-shadow:0 0 2px rgba(0,0,0,0.8);
+        }
+    </style>
+    <apex:includeLightning />    
+    <div class="content">        <div  id="LightningComponentid" />
+    </div>
+        
+    <script>
+    $Lightning.use("c:ps_Welcome_VFLWC", function() {
+        $Lightning.createComponent("c:psWelcome",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
+</apex:page>

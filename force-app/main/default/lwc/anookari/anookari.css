@@ -1,0 +1,54 @@
+@import 'c/cssLibrary';
+.fixed-top{
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    z-index: 101;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.content-div{
+	width:100%;
+	height:720px;
+}
+
+.fixed-bottom{
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 101;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.headerDiv{
+	background: var(-a1);
+	height:50px !important;
+}
+
+.wid-100{
+	width:100%;
+}
+
+.appTitle{
+    padding-left:20px;
+}
+
+.circle {
+    border: 2px solid grey;
+    background-color: #FFFFFF;
+    height: 35px;
+    border-radius:50%;
+    width: 35px;
+}
+
+.profile-icon-div{
+    padding: 7px 10px 0 0;
+}
+
+.profile-icon{
+    padding: 2px 0 0 4px;
+}

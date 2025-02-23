@@ -1,0 +1,32 @@
+<template>
+    <div class="container">
+        <div class="top-card">
+            <p>{topCard.displaytext} - {topCard.actionTaken}</p>
+        </div>
+
+        <div
+            class="middle-card"
+            style={middleCardStyle}
+            onmousedown={startDrag}
+            onmousemove={dragging}
+            onmouseup={endDrag}
+            ontouchstart={startDrag}
+            ontouchmove={dragging}
+            ontouchend={endDrag}
+        >
+            <p>{middleCard.displaytext}</p>
+            <p>{middleCard.description}</p>
+            <p>{middleCard.actionTaken}</p>
+            <template if:true={likeAnimation}>
+                <div class="like-animation show">Liked!</div>
+            </template>
+            <template if:true={dislikeAnimation}>
+                <div class="dislike-animation show">Disliked!</div>
+            </template>
+        </div>
+
+        <div class="bottom-card">
+            <p>{bottomCard.displaytext} - {bottomCard.actionTaken}</p>
+        </div>
+    </div>
+</template>
