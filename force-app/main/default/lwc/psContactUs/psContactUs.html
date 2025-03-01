@@ -1,62 +1,65 @@
 <template>
-    <button class="btnActiveColor btnWidth submitButton" onclick={contactusClick}>
-        <span>Contact Me</span>
-    </button>
-    <template if:true={showToastMessage}>
-        <div class="toast-container">
-            <div class="toast-box">
-                <lightning-icon icon-name="action:approval" alternative-text={toastTitle} size="small" class="toast-icon"></lightning-icon>
-                <div class="toast-content">
-                    <p>{toastMessage}</p>
+    <div class="contactus-container">
+        <button class="btnActiveColor btnWidth submitButton " onclick={contactusClick}>
+            <span>Contact Me</span>
+        </button>
+        <template if:true={showToastMessage}>
+            <div class="toast-container">
+                <div class="toast-box">
+                    <lightning-icon icon-name="action:approval" alternative-text={toastTitle} size="small" class="toast-icon"></lightning-icon>
+                    <div class="toast-content">
+                        <p>{toastMessage}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </template>
-    <div data-id="contactus-container" class="slds-grid slds-wrap slds-hide">
-        <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField">
-                <c-input-field  data-id="firstName" type="text" name="firstName" fieldvalue={firstName} placeholdertext="First Name*" 
-                    fieldlabel="First Name" onvalidateinput={handleValueChange} class="firstName" required="true"></c-input-field >
+        </template>
+        <div data-id="contactus-container" class="slds-grid slds-wrap slds-hide">
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField">
+                    <c-input-field  data-id="firstName" type="text" name="firstName" fieldvalue={firstName} placeholdertext="First Name*" 
+                        fieldlabel="First Name" onvalidateinput={handleValueChange} class="firstName" required="true"></c-input-field >
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
+                    <c-input-field  data-id="lastName" type="text" name="lastName" fieldvalue={lastName} placeholdertext="Last Name*" 
+                        fieldlabel="Last Name" onvalidateinput={handleValueChange} class="lastName"></c-input-field >
+                </div>
             </div>
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
-                <c-input-field  data-id="lastName" type="text" name="lastName" fieldvalue={lastName} placeholdertext="Last Name*" 
-                    fieldlabel="Last Name" onvalidateinput={handleValueChange} class="lastName"></c-input-field >
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField secField">
+                    <c-input-field  data-id="emailAddress" type="email" name="emailAddress" fieldvalue={emailAddress} placeholdertext="Email*" 
+                            fieldlabel="Email" onvalidateinput={handleValueChange} class="emailAddress"></c-input-field >
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
+                    <c-input-field  data-id="companyName" type="text" name="companyName" fieldvalue={companyName} placeholdertext="Company Name*" 
+                            fieldlabel="Company Name" onvalidateinput={handleValueChange} class="companyName"></c-input-field >
+                </div>
             </div>
-        </div>
-        <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField secField">
-                <c-input-field  data-id="emailAddress" type="email" name="emailAddress" fieldvalue={emailAddress} placeholdertext="Email*" 
-                        fieldlabel="Email" onvalidateinput={handleValueChange} class="emailAddress"></c-input-field >
-            </div>
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
-                <c-input-field  data-id="companyName" type="text" name="companyName" fieldvalue={companyName} placeholdertext="Company Name*" 
-                        fieldlabel="Company Name" onvalidateinput={handleValueChange} class="companyName"></c-input-field >
-            </div>
-        </div>
 
-        <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField">
-                <c-input-field  data-id="mobilePhone" type="text" name="mobilePhone" fieldvalue={mobilePhone} placeholdertext="Mobile" 
-                        fieldlabel="Mobile" onvalidateinput={handleValueChange} class="mobilePhone"></c-input-field >
+            <div class="slds-col slds-grid slds-wrap slds-size_1-of-1 m-t-30">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 firstField">
+                    <c-input-field  data-id="mobilePhone" type="text" name="mobilePhone" fieldvalue={mobilePhone} placeholdertext="Mobile" 
+                            fieldlabel="Mobile" onvalidateinput={handleValueChange} class="mobilePhone"></c-input-field >
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
+                    <c-input-field  data-id="otherPhone" type="text" name="otherPhone" fieldvalue={otherPhone} placeholdertext="Other Phone" 
+                            fieldlabel="Other Phone" onvalidateinput={handleValueChange} class="otherPhone"></c-input-field >
+                </div>            
             </div>
-            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 secondField">
-                <c-input-field  data-id="otherPhone" type="text" name="otherPhone" fieldvalue={otherPhone} placeholdertext="Other Phone" 
-                        fieldlabel="Other Phone" onvalidateinput={handleValueChange} class="otherPhone"></c-input-field >
-            </div>            
-        </div>
 
-        <div class="slds-col slds-size_1-of-1 m-t-30">
-            <c-input-field  data-id="subject" type="text" name="subject" fieldvalue={subject} placeholdertext="Subject*" 
-                        fieldlabel="Subject" onvalidateinput={handleValueChange} class="subject"></c-input-field >
-        </div>
-        <div class="slds-col slds-size_1-of-1 m-t-30">
-            <c-text-area type="multiLneText"  maxrows="5" data-id="messageta" name="messageta" fieldvalue={message} 
-                        fieldlabel="Message" placeholdertext="Message*" onvaluechange={handleValueChange} class="messageta"></c-text-area>
-        </div>
-        <div class="slds-col slds-size_1-of-1 m-t-30">
-            <button data-id="submitBtn" class="btnActiveColor btnWidth submitButton" onclick={submitClick}>
-                <span>Submit</span>
-            </button>
+            <div class="slds-col slds-size_1-of-1 m-t-30">
+                <c-input-field  data-id="subject" type="text" name="subject" fieldvalue={subject} placeholdertext="Subject*" 
+                            fieldlabel="Subject" onvalidateinput={handleValueChange} class="subject"></c-input-field >
+            </div>
+            <div class="slds-col slds-size_1-of-1 m-t-30">
+                <c-text-area type="multiLneText"  maxrows="5" data-id="messageta" name="messageta" fieldvalue={message} 
+                            fieldlabel="Message" placeholdertext="Message*" onvaluechange={handleValueChange} class="messageta"></c-text-area>
+            </div>
+            <div class="slds-col slds-size_1-of-1 m-t-30">
+                <button data-id="submitBtn" class="btnActiveColor btnWidth submitButton" onclick={submitClick}>
+                    <span>Submit</span>
+                </button>
+            </div>
         </div>
     </div>
+    
 </template>

@@ -77,7 +77,7 @@ export default class PsCheckEmail extends NavigationMixin(LightningElement) {
         checkForContact({ emailAddress: this.contactEmailAddress })
             .then(result => {
                 if (result == 'Failure') {
-                    contactEmailAddressNode.setFieldValidity('Could not find any records in the system for ' + this.contactEmailAddress + '. Please contact me by clicking on "Contact Me" button.');
+                    contactEmailAddressNode.setFieldValidity('No records for ' + this.contactEmailAddress + '. Click \'Contact Me\' to reach out.');
                 } else {
                     if (contactEmailAddressNode) contactEmailAddressNode.setFieldValidity('');
                     this.displayResume(result);

@@ -1,5 +1,6 @@
 :host {
-    --red: #9f1c35;
+    --red: #d0021b;
+    --darkred: #9f1c35;
     --red-hover: #6f1425;
     --red-visited: #7f162a;
     --black: #382e2c;
@@ -365,13 +366,13 @@
 .float-label_focus,
 .caret_focus {
     outline: none;
-    color: #2178c0!important;
+    color: var(--t1-c2) !important;
 }
 
 .float-label_error,
 .error-caret {
     outline: none;
-    color: #d0021b!important;
+    color: var(--red) !important; /*#d0021b*/
 }
 
 .float-container .float-label.disableText{
@@ -399,14 +400,16 @@
 }
 
 .float-container.float-container_focus {
-    border: solid 1px #2178c0!important; 
+    border: solid 1px var(--t1-c3) !important; 
+    box-shadow: 0 2px 5px var(--t1-c3) !important; /*#2178c0  */
 }
 .lwc .ligthning-combo-box label.float-label.float-label-disabled {
     color: #c2c0c0!important;
 }
 
 .float-container.float-container_empty {
-    border: solid 1px #7c7574!important;
+    border: solid 1px var(--t1-c2) !important; /*#7c7574*/
+    box-shadow: 0 2px 5px var(--t1-c2) !important;
 }
 
 .float-container.float-container_disabled {
@@ -415,7 +418,8 @@
 
 .float-container.float-container_error,
 .ligthning-combo-box .slds-combobox_container .slds-input.slds-combobox__input.input_error {
-    border: solid 1px #d0021b!important;
+    border: solid 1px var(--darkred) !important;
+    box-shadow: 0 2px 5px var(--darkred) !important;
 }
 
 .float-container input:focus {
@@ -437,7 +441,8 @@
     height: 39px;
     position: relative;
     border-radius: 4px;
-    border: solid 1px #382e2c;
+    border: solid 1px var(--t1-c2);
+    box-shadow: 0 2px 5px var(--t1-c2) !important;
 }
 
 .float-container select.slds-select:focus {
@@ -507,7 +512,7 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #d0021b;
+    color: var(--red);
 }
 
 .error div[role=alert].slds-form-element__msg {
@@ -602,11 +607,13 @@
   }
   
   .float-ta-container.float-container_focus {
-    border: solid 1px #2178c0!important; 
+    border: solid 1px (--t1-c3) !important; 
+    box-shadow: 0 2px 5px var(--t1-c3) !important;
   }
   
   .float-ta-container.float-container_empty {
-    border: solid 1px #7c7574!important;
+    border: solid 1px var(--t1-c2) !important;
+    box-shadow: 0 2px 5px var(--t1-c2) !important;
   }
   
   .float-ta-container.float-container_disabled {
@@ -614,7 +621,8 @@
   }
   
   .float-ta-container.float-container_error {
-      border: solid 1px #d0021b!important;
+      border: solid 1px var(--darkred) !important;
+      box-shadow: 0 2px 5px var(--darkred) !important;
   }
   
 .float-ta-container textarea:focus {

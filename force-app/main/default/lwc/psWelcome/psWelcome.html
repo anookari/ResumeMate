@@ -15,26 +15,25 @@
                     </div>
                 </template>
                 
-                <div class="slds-col slds-size_1-of-1" style="padding-top:50px;">
-                    <div  class="slds-grid slds-wrap">
-                        <div class="slds-col slds-size_1-of-1 " >
-                            <template if:false={showResume}>
-                                <c-ps-check-email onshowresume={handleShowResume}></c-ps-check-email>
-                            </template>
-                            <template if:true={showResume}>
-                                <c-ps-resume-view resumeid={resumeId}></c-ps-resume-view>
-                            </template>
+                <div class="slds-col slds-size_1-of-1" >
+                    <template if:false={showResume}>
+                        <div class="slds-grid slds-wrap slds-gutters p-t-20" >
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 section-container">
+                                <c-ps-about-me></c-ps-about-me>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 section-container">                            
+                                <c-ps-check-email onshowresume={handleShowResume}></c-ps-check-email>                                                        
+                            </div>
                         </div>
-                        <div class="slds-col slds-size_1-of-1 m-t-150">
-                            <c-ps-contact-us ></c-ps-contact-us>
-                        </div>
-                    </div>
+                    </template>                    
+                    <template if:true={showResume}>
+                        <c-ps-resume-view resumeid={resumeId}></c-ps-resume-view>
+                    </template>
                 </div>
-                <!-- <div class="slds-col slds-size_1-of-1" style="padding-top:50px;">
-                    <c-ps-resume-view></c-ps-resume-view>
-                </div> -->
+                <div class="slds-col slds-size_1-of-1">
+                    <c-ps-contact-us></c-ps-contact-us>
+                </div>
             </div>
         </div>
     </template>
-    
 </template>
