@@ -1,5 +1,23 @@
 @import 'c/cssLibrary';
 
+.checkemail-container {
+    padding: 0 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spread out */
+}
+
+.input-container {
+    margin-top: 30px; 
+}
+
+.button-container {
+    margin-top: 20px; 
+    align-items: center;
+    width: 50%;
+}
+
 .btnColor {
     color: var(--t1-white);  
     background: var(--t1-c2); 
@@ -32,21 +50,44 @@
     text-decoration: none;
     background: var(--t1-c2); 
     color: var(--t1-white); 
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    width: 100%;
 }
 
 .submitButton:hover {
-    background: var(--t1-c3); 
+    background: var(--t1-c3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
-.emailDiv {
-    margin-top: 150px;
-    padding: 0 80px;
+.resumemate-info {
+    margin-top: auto; /* Pushes the content to the bottom */
+    text-align: center;
+}
+
+.resumemate-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resumemate-description {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.resumemate-creator {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 767px) {
-    .emailDiv {
-        margin-top: 0;
+    .checkemail-container {
+        margin-top: 80px;
         padding: 0;
         margin-bottom: 50px;
+        height: 100%;
     }
 }

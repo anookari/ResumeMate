@@ -41,16 +41,26 @@ export default class PsContactUs extends LightningElement {
     contactusClick(){
         let element = this.template.querySelector('[data-id="contactus-container"]');
         if(this.showContactUsForm){
-            this.showContactUsForm = false;
-            if(element){
-                element.classList.add('slds-hide');
-            }
-            this.resetFields();
+             // Scroll away smoothly before hiding
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                this.showContactUsForm = false;
+                if(element){
+                    element.classList.add('slds-hide');
+                }
+                this.resetFields();
+            }, 500);
+            // this.showContactUsForm = false;
+            // if(element){
+            //     element.classList.add('slds-hide');
+            // }
+            // this.resetFields();
         }
         else{
             this.showContactUsForm = true;
             if(element){
                 element.classList.remove('slds-hide');
+                element.scrollIntoView({ behavior: 'smooth' });
             }
         }
     }
